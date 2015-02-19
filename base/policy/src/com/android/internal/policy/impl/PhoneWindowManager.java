@@ -841,13 +841,15 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 break;
             case LONG_PRESS_POWER_GLOBAL_ACTIONS:
                 mPowerKeyHandled = true;
-                if (!performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false)) {
-                    performAuditoryFeedbackForAccessibilityIfNeed();
-                }
+                performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false);
                 sendCloseSystemWindows(SYSTEM_DIALOG_REASON_GLOBAL_ACTIONS);
-                showGlobalActionsDialog();
+                mWindowManagerFuncs.shutdown(resolvedBehavior == LONG_PRESS_POWER_SHUT_OFF);
                 break;
             case LONG_PRESS_POWER_SHUT_OFF:
+                mPowerKeyHandled = true;
+                performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false);
+                sendCloseSystemWindows(SYSTEM_DIALOG_REASON_GLOBAL_ACTIONS);
+                mWindowManagerFuncs.shutdown(resolvedBehavior == LONG_PRESS_POWER_SHUT_OFF);
             case LONG_PRESS_POWER_SHUT_OFF_NO_CONFIRM:
                 mPowerKeyHandled = true;
                 performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false);
