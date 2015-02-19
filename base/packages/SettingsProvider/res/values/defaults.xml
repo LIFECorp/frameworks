@@ -17,15 +17,15 @@
  */
 -->
 <resources>
-    <bool name="def_dim_screen">true</bool>
-    <integer name="def_screen_off_timeout">-1</integer>
+    <bool name="def_dim_screen">false</bool>
+    <integer name="def_screen_off_timeout">2147483647</integer> <!--Provo 1800000-> 30min o 2147483647-> Praticamente mai -->
     <bool name="def_airplane_mode_on">false</bool>
     <!-- Comma-separated list of bluetooth, wifi, and cell. -->
     <string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax</string>
     <string name="airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc</string>
     <bool name="def_auto_time">true</bool>
     <bool name="def_auto_time_zone">true</bool>
-    <bool name="def_accelerometer_rotation">true</bool>
+    <bool name="def_accelerometer_rotation">false</bool>
     <!-- Default screen brightness, from 0 to 255.  102 is 40%. -->
     <integer name="def_screen_brightness">102</integer>
     <bool name="def_screen_brightness_automatic_mode">false</bool>
@@ -33,7 +33,7 @@
     <fraction name="def_window_transition_scale">100%</fraction>
     <bool name="def_haptic_feedback">true</bool>
 
-    <bool name="def_bluetooth_on">true</bool>
+    <bool name="def_bluetooth_on">false</bool>
     <bool name="def_wifi_display_on">false</bool>
     <bool name="def_install_non_market_apps">false</bool>
     <bool name="def_package_verifier_enable">true</bool>
@@ -43,13 +43,13 @@
     -->
     <!--M: set gps default is off.-->
     <string name="def_location_providers_allowed" translatable="false"></string>
-    <bool name="assisted_gps_enabled">true</bool>
-    <bool name="def_netstats_enabled">true</bool>
+    <bool name="assisted_gps_enabled">false</bool>
+    <bool name="def_netstats_enabled">false</bool>
     <bool name="def_usb_mass_storage_enabled">true</bool>
     <bool name="def_wifi_on">false</bool>
     <!-- 0 == never, 1 == only when plugged in, 2 == always -->
     <integer name="def_wifi_sleep_policy">2</integer>
-    <bool name="def_networks_available_notification_on">true</bool>
+    <bool name="def_networks_available_notification_on">false</bool>
 
     <bool name="def_backup_enabled">false</bool>
     <!--string name="def_backup_transport" translatable="false">android/com.android.internal.backup.LocalTransport</string-->
@@ -59,7 +59,7 @@
          pending notification -->
     <bool name="def_notification_pulse">true</bool>
 
-    <bool name="def_mount_play_notification_snd">true</bool>
+    <bool name="def_mount_play_notification_snd">false</bool>
     <bool name="def_mount_ums_autostart">false</bool>
     <bool name="def_mount_ums_prompt">true</bool>
     <bool name="def_mount_ums_notify_enabled">true</bool>
@@ -77,7 +77,7 @@
     <string name="def_unlock_sound" translatable="false">/system/media/audio/ui/Unlock.ogg</string>
     <string name="def_wireless_charging_started_sound" translatable="false">/system/media/audio/ui/WirelessChargingStarted.ogg</string>
 
-    <bool name="def_lockscreen_disabled">false</bool>
+    <bool name="def_lockscreen_disabled">true</bool>
     <bool name="def_device_provisioned">false</bool>
     <integer name="def_dock_audio_media_enabled">1</integer>
 
@@ -162,7 +162,7 @@
     <bool name="def_sound_effects_enabled">false</bool>
 
     <!-- Development settings -->
-    <bool name="def_stay_on_while_plugged_in">false</bool>
+    <bool name="def_stay_on_while_plugged_in">true</bool>
 
     <!-- Number of retries for connecting to DHCP.
          Value here is the same as WifiStateMachine.DEFAULT_MAX_DHCP_RETRIES -->
